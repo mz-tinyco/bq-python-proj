@@ -24,7 +24,7 @@ def sync_query(
 
 
 # [START run]
-def main(project_id, query, timeout, num_retries, use_legacy_sql):
+def main(query, timeout, num_retries, use_legacy_sql):
     # [START build_service]
     # Grab the application's default credentials from the environment.
     credentials = GoogleCredentials.get_application_default()
