@@ -35,7 +35,7 @@ def main(project_id, query, timeout, num_retries, use_legacy_sql):
 
     query_job = sync_query(
         bigquery,
-        project_id,
+        'crafty-campaign-106420',
         query,
         timeout,
         num_retries,
@@ -67,7 +67,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         description=__doc__,
         formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument('project_id', help='Your Google Cloud project ID.')
+    #parser.add_argument('project_id', help='Your Google Cloud project ID.')
     parser.add_argument('query', help='BigQuery SQL Query.')
     parser.add_argument(
         '-t', '--timeout',
@@ -88,7 +88,6 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     main(
-        args.project_id,
         args.query,
         args.timeout,
         args.num_retries,
