@@ -68,7 +68,7 @@ if __name__ == '__main__':
         description=__doc__,
         formatter_class=argparse.RawDescriptionHelpFormatter)
     #parser.add_argument('project_id', help='Your Google Cloud project ID.')
-    parser.add_argument('query', help='BigQuery SQL Query.')
+    #parser.add_argument('query', help='BigQuery SQL Query.')
     parser.add_argument(
         '-t', '--timeout',
         help='Number seconds to wait for a result',
@@ -88,7 +88,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     main(
-        args.query,
+        'select * from mzhu.v_dau_mtrlz limit 5000',
         args.timeout,
         args.num_retries,
         args.use_legacy_sql)
